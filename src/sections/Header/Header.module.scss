@@ -1,9 +1,55 @@
+@use '../../styles/variables' as *;
+
 .header {
   width: 100%;
   padding: 32px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
 
-  .logo {
-    height: 2rem;
-    width: auto;
+  .contentContainer {
+    max-width: $container-max-large-desktop;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+
+    .linksContainer {
+      display: flex;
+      gap: 1rem;
+      a {
+        text-decoration: none;
+        font-size: $font-size-regular;
+        color: #252a1c;
+      }
+    }
+
+    .logo {
+      height: 2rem;
+      width: auto;
+    }
+
+    .contactBtn {
+      justify-self: flex-end;
+      font-size: $font-size-button;
+      text-decoration: none;
+      color: #252a1c;
+      font-weight: 700;
+      border: 2px solid $color-text-primary;
+      padding: 2px 16px 2px 2px;
+      border-radius: 500px;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        box-shadow: 0 3px 4px -1px rgba(37, 42, 28, 0.45);
+      }
+
+      .profilePic {
+        border-radius: 50%;
+      }
+    }
   }
 }
