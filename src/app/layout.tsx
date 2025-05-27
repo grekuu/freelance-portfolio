@@ -1,10 +1,27 @@
 import type { Metadata } from 'next';
-import { Open_Sans } from 'next/font/google';
+import localFont from 'next/font/local';
 import './globals.css';
 
-const openSans = Open_Sans({
-  subsets: ['latin'],
-  variable: '--font-open-sans',
+const velaSans = localFont({
+  src: [
+    {
+      path: '../public/fonts/VelaSans-Regular.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../public/fonts/VelaSans-Medium.woff2',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: '../public/fonts/VelaSans-Semibold.woff2',
+      weight: '600',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-vela-sans',
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
@@ -20,7 +37,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${openSans.variable} antialiased`}>{children}</body>
+      <body className={`${velaSans.variable} antialiased`}>{children}</body>
     </html>
   );
 }
