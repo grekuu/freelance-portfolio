@@ -7,7 +7,7 @@ import {
   Services,
   Testimonials,
   Works,
-} from "@/sections";
+} from '@/sections';
 
 const Home = () => {
   return (
