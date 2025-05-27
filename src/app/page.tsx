@@ -1,9 +1,11 @@
 import {
   About,
   Contact,
+  FAQ,
   Footer,
   Header,
   Hero,
+  Process,
   Services,
   Testimonials,
   Works,
@@ -17,6 +19,8 @@ const Home = () => {
       <Works />
       <Testimonials />
       <Services />
+      <Process />
+      <FAQ />
       <About />
       <Contact />
       <Footer />
