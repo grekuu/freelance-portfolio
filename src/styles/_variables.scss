@@ -1,3 +1,4 @@
+// Colors
 $color-dark: #282622;
 $color-light-bg: #fcfaf5;
 $color-light-text: #e8e5dd;
@@ -10,3 +11,12 @@ $color-text-light-30: rgba($color-light-text, 0.3);
 $color-text-light-20: rgba($color-light-text, 0.2);
 $color-text-dark-20: rgba($color-dark, 0.2);
 $color-bg-dark-90: rgba($color-dark, 0.9);
+
+// Font Sizes
+$font-size-xs: 0.875rem; // 14px
+$font-size-base: 1.125rem; // 18px
+$font-size-md: 1.5rem; // 24px
+$font-size-lg: 2rem; // 32px
+$font-size-xl: 2.5rem; // 40px
+$font-size-2xl: 3.125rem; // 50px
+$font-size-3xl: 3.75rem; // 60px
