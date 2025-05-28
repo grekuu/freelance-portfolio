@@ -1,0 +1,36 @@
+@use '../../styles/variables' as *;
+
+.header {
+  padding: 38px 67px;
+  width: 100%;
+  background: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+
+  .links {
+    display: flex;
+    gap: 24px;
+    .link {
+      font-size: $font-size-base;
+      text-decoration: none;
+      color: $color-light-text;
+    }
+  }
+
+  .contactBtn {
+    justify-self: end;
+    padding: 7px 20px 7px 5px;
+    border: 1px solid $color-light-text;
+    border-radius: 32px;
+    font-size: $font-size-base;
+    text-decoration: none;
+    color: $color-light-text;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+  }
+}

@@ -5,17 +5,17 @@ import './globals.css';
 const velaSans = localFont({
   src: [
     {
-      path: '../public/fonts/VelaSans-Regular.woff2',
+      path: '../fonts/VelaSans-Regular.woff2',
       weight: '400',
       style: 'normal',
     },
     {
-      path: '../public/fonts/VelaSans-Medium.woff2',
+      path: '../fonts/VelaSans-Medium.woff2',
       weight: '500',
       style: 'normal',
     },
     {
-      path: '../public/fonts/VelaSans-Semibold.woff2',
+      path: '../fonts/VelaSans-SemiBold.woff2',
       weight: '600',
       style: 'normal',
     },

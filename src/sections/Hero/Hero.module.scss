@@ -1,0 +1,7 @@
+@use '../../styles/variables' as *;
+
+.container {
+  background: $color-dark;
+  width: 100%;
+  height: 100dvh;
+}
