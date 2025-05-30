@@ -1,0 +1,11 @@
+@use '../../styles/variables' as *;
+
+.button {
+  background: $color-dark-button;
+  font-size: $font-size-base;
+  padding: 17px 60px;
+  border-radius: 10;
+  border: 1px solid $color-dark-border;
+  color: $color-light-text;
+  text-decoration: none;
+}
