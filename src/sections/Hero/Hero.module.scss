@@ -1,10 +1,11 @@
 @use '../../styles/variables' as *;
+@use '../../styles/breakpoints' as *;
 
 .container {
   background: $color-dark;
   width: 100%;
   height: 100dvh;
-  padding: 112px 20px 46px 20px;
+  padding: 112px 0 46px 0;
   z-index: 5;
   position: relative;
 
@@ -16,12 +17,36 @@
     justify-content: center;
     width: fit-content;
 
+    @media (max-width: $screen-xl) {
+      padding-left: 50px;
+    }
+
+    @media (max-width: $screen-md) {
+      padding: 0;
+    }
+
     h1 {
       font-weight: 500;
       color: $color-light-text;
       font-size: 16rem;
       line-height: 1;
       margin-top: 3rem;
+
+      @media (max-width: $screen-xl) {
+        font-size: 13rem;
+      }
+
+      @media (max-width: $screen-lg) {
+        font-size: 10rem;
+      }
+
+      @media (max-width: $screen-md) {
+        font-size: 8rem;
+      }
+
+      @media (max-width: $screen-sm) {
+        font-size: 6rem;
+      }
     }
 
     h3 {
@@ -32,12 +57,33 @@
       margin-left: auto;
       line-height: 1.2;
 
+      @media (max-width: $screen-xl) {
+        font-size: $font-size-2xl;
+      }
+
+      @media (max-width: $screen-lg) {
+        font-size: $font-size-xl;
+      }
+
+      @media (max-width: $screen-md) {
+        margin-left: 0;
+        font-size: $font-size-lg;
+      }
+
       .line2 {
         margin-left: 1rem;
+
+        @media (max-width: $screen-md) {
+          margin-left: 0;
+        }
       }
 
       .line3 {
         margin-left: 2rem;
+
+        @media (max-width: $screen-md) {
+          margin-left: 0;
+        }
       }
     }
   }
@@ -48,11 +94,13 @@
     background: rgb(255, 255, 255, 0.3);
     position: absolute;
     bottom: 40px;
-    left: 120px;
+    left: 111px;
     overflow: hidden;
 
-    @media (max-width: 892px) {
-      left: 20px;
+    @media (max-width: $screen-sm) {
+      right: 20px;
+      left: auto;
+      bottom: 20px;
     }
 
     .whiteLine {
@@ -68,6 +116,12 @@
     position: absolute;
     bottom: 20px;
     right: 40px;
+
+    @media (max-width: $screen-sm) {
+      left: 20px;
+      right: auto;
+      bottom: 0;
+    }
   }
 }
 

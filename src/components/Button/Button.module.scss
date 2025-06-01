@@ -1,4 +1,5 @@
 @use '../../styles/variables' as *;
+@use '../../styles/breakpoints' as *;
 
 .button {
   background: $color-dark-button;
@@ -8,4 +9,8 @@
   border: 1px solid $color-dark-border;
   color: $color-light-text;
   text-decoration: none;
+
+  @media (max-width: $screen-lg) {
+    padding: 12px 40px;
+  }
 }
