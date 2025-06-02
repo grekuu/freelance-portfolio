@@ -1,4 +1,5 @@
 @use '../../styles/breakpoints' as *;
+@use '../../styles/variables' as *;
 
 .container {
   position: absolute;
@@ -20,6 +21,7 @@
 .line {
   width: 1px;
   height: 100%;
+  background: $color-light-border;
 
   &:first-child {
     margin-left: 0;
@@ -28,6 +30,10 @@
   &:last-child {
     margin-right: 0;
   }
+}
+
+.lightTheme {
+  background: $color-dark-border;
 }
 
 .animated .line {

@@ -1,0 +1,11 @@
+@use '../../styles/variables' as *;
+
+.tag {
+  font-size: $font-size-xs;
+  font-weight: 600;
+  color: $color-text-dark-20;
+}
+
+.lightTheme {
+  color: $color-text-light-20;
+}

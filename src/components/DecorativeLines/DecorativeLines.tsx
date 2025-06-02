@@ -2,6 +2,7 @@ import styles from './DecorativeLines.module.scss';
 
 interface LineProps {
   count?: number;
+  darkSection?: boolean;
   color?: string;
   animated?: boolean;
   className?: string;
@@ -9,7 +10,7 @@ interface LineProps {
 
 const DecorativeLines = ({
   count = 2,
-  color = '#4F4E4D',
+  darkSection = false,
   animated = false,
   className,
 }: LineProps) => {
@@ -20,9 +21,8 @@ const DecorativeLines = ({
       {Array.from({ length: count }).map((_, index) => (
         <div
           key={index}
-          className={styles.line}
+          className={`${styles.line} ${darkSection ? styles.lightTheme : ''}`}
           style={{
-            backgroundColor: color,
             animationDelay: animated ? `${index * 0.2}s` : '0s',
           }}
         />

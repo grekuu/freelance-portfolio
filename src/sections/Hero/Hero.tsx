@@ -4,7 +4,7 @@ import styles from './Hero.module.scss';
 const Hero = () => {
   return (
     <section className={styles.container}>
-      <DecorativeLines count={5} animated={true} />
+      <DecorativeLines count={5} animated={true} darkSection />
       <ContentContainer>
         <div className={styles.heroTextContainer}>
           <h1>PRUSK</h1>

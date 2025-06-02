@@ -1,0 +1,80 @@
+@use '../../styles/variables' as *;
+@use '../../styles/breakpoints' as *;
+
+.container {
+  width: 100%;
+  background: $color-light-bg;
+  padding: 40px 0 91px 0;
+  position: relative;
+
+  .sectionTitle {
+    font-size: $font-size-3xl;
+    color: $color-dark;
+    font-weight: 600;
+    line-height: 1;
+    margin: 10px 0;
+  }
+
+  .sectionSubtitle {
+    font-size: $font-size-md;
+    color: $color-dark;
+    font-weight: 600;
+  }
+
+  .worksGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 136px;
+    row-gap: 56px;
+    margin-top: 88px;
+
+    @media (max-width: $screen-lg) {
+      column-gap: 80px;
+    }
+
+    @media (max-width: $screen-md) {
+      grid-template-columns: 1fr;
+      row-gap: 40px;
+    }
+
+    @media (max-width: $screen-sm) {
+      margin-top: 40px;
+    }
+
+    .workItem {
+      .imageContainer {
+        padding: 58px 54px;
+        background: $color-dark;
+
+        @media (max-width: $screen-xl) {
+          padding: 40px 30px;
+        }
+
+        @media (max-width: $screen-sm) {
+          padding: 20px 15px;
+        }
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .workInfo {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 25px;
+
+        span {
+          color: $color-dark;
+          font-size: $font-size-md;
+          font-weight: 600;
+
+          @media (max-width: $screen-xl) {
+            font-size: $font-size-base;
+          }
+        }
+      }
+    }
+  }
+}
