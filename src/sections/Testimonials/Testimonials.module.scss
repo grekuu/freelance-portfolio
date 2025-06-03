@@ -1,0 +1,32 @@
+@use '../../styles/variables' as *;
+
+.container {
+  background: $color-bg-dark-90;
+  width: 100%;
+  padding: 40px 0;
+  position: relative;
+
+  .contentContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    color: $color-light-text;
+
+    .testimonial {
+      font-size: $font-size-3xl;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    .personInfo {
+      font-size: $font-size-md;
+    }
+
+    .readMoreBtn {
+      text-decoration: none;
+      font-size: $font-size-base;
+      font-weight: 600;
+      color: $color-light-text;
+    }
+  }
+}
