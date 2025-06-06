@@ -1,7 +1,7 @@
 import { ContentContainer, DecorativeLines, SectionTag } from '@/components';
 import styles from './Works.module.scss';
-import Image from 'next/image';
-import { projectImage } from '../../../public';
+import { WorkItem } from './components';
+import { worksData } from '@/data';
 
 const Works = () => {
   return (
@@ -16,42 +16,14 @@ const Works = () => {
         </p>
 
         <div className={styles.worksGrid}>
-          <div className={styles.workItem}>
-            <div className={styles.imageContainer}>
-              <Image src={projectImage} alt="LPP" />
-            </div>
-            <div className={styles.workInfo}>
-              <span>LPP</span>
-              <span>DESIGN & DEVELOPMENT</span>
-            </div>
-          </div>
-          <div className={styles.workItem}>
-            <div className={styles.imageContainer}>
-              <Image src={projectImage} alt="LPP" />
-            </div>
-            <div className={styles.workInfo}>
-              <span>LPP</span>
-              <span>DESIGN & DEVELOPMENT</span>
-            </div>
-          </div>
-          <div className={styles.workItem}>
-            <div className={styles.imageContainer}>
-              <Image src={projectImage} alt="LPP" />
-            </div>
-            <div className={styles.workInfo}>
-              <span>LPP</span>
-              <span>DESIGN & DEVELOPMENT</span>
-            </div>
-          </div>
-          <div className={styles.workItem}>
-            <div className={styles.imageContainer}>
-              <Image src={projectImage} alt="LPP" />
-            </div>
-            <div className={styles.workInfo}>
-              <span>LPP</span>
-              <span>DESIGN & DEVELOPMENT</span>
-            </div>
-          </div>
+          {worksData.map((work, index) => (
+            <WorkItem
+              key={index}
+              image={work.image}
+              companyName={work.companyName}
+              service={work.service}
+            />
+          ))}
         </div>
       </ContentContainer>
     </section>

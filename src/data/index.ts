@@ -1,0 +1,1 @@
+export { worksData } from './worksData';
