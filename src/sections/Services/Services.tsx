@@ -1,5 +1,7 @@
 import { ContentContainer, DecorativeLines, SectionTag } from '@/components';
 import styles from './Services.module.scss';
+import { offersData } from '@/data';
+import { OfferCard } from './components';
 
 const Services = () => {
   return (
@@ -12,6 +14,17 @@ const Services = () => {
           Flexible packages tailored to your goals. Whether you need a simple
           site or a custom solution, we’ve got you covered.
         </p>
+        <div className={styles.offersContainer}>
+          {offersData.map((offer, index) => (
+            <OfferCard
+              key={index}
+              title={offer.title}
+              price={offer.price}
+              description={offer.description}
+              features={offer.features}
+            />
+          ))}
+        </div>
       </ContentContainer>
     </section>
   );

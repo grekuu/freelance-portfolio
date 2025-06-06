@@ -20,4 +20,12 @@
     color: $color-dark;
     font-weight: 600;
   }
+
+  .offersContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 36px;
+    margin-top: 88px;
+    padding: 0 36px;
+  }
 }
