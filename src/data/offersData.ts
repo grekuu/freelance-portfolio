@@ -15,8 +15,8 @@ export const offersData = [
     ],
   },
   {
-    title: 'Basic',
-    price: '1000',
+    title: 'Standard',
+    price: '2000',
     description:
       'A flexible, custom-built Webflow site with all the essentials – ideal for small teams or solo founders ready for a professional presence.',
     features: [
@@ -30,8 +30,8 @@ export const offersData = [
     ],
   },
   {
-    title: 'Basic',
-    price: '1000',
+    title: 'Pro',
+    price: '4000',
     description:
       'A flexible, custom-built Webflow site with all the essentials – ideal for small teams or solo founders ready for a professional presence.',
     features: [

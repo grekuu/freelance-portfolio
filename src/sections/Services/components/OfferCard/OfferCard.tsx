@@ -5,13 +5,22 @@ type OfferCardProps = {
   price: string;
   description: string;
   features: string[];
+  darkMode?: boolean;
 };
 
-const OfferCard = ({ title, price, description, features }: OfferCardProps) => {
+const OfferCard = ({
+  title,
+  price,
+  description,
+  features,
+  darkMode = false,
+}: OfferCardProps) => {
   return (
-    <div className={styles.cardContainer}>
+    <div
+      className={`${styles.cardContainer} ${darkMode ? styles.darkTheme : ''}`}
+    >
       <h3 className={styles.offerTitle}>{title}</h3>
-      <p className={styles.offerPrice}>{price} + PLN</p>
+      <p className={styles.offerPrice}>{price}+ PLN</p>
       <p className={styles.offerDescription}>{description}</p>
       <div className={styles.separator} />
       <ul className={styles.offerFeatures}>

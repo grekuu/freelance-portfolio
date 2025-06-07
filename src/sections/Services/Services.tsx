@@ -22,6 +22,7 @@ const Services = () => {
               price={offer.price}
               description={offer.description}
               features={offer.features}
+              darkMode={index === 1}
             />
           ))}
         </div>

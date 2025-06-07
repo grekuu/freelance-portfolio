@@ -1,22 +1,39 @@
 @use '../../../../styles/variables' as *;
+@use '../../../../styles/breakpoints' as *;
 
 .cardContainer {
   padding: 80px 32px;
   border: 1px solid $color-dark;
   width: 100%;
   color: $color-dark;
-  min-height: 750px;
+  min-height: 70vh;
+
+  @media (max-width: $screen-md) {
+    padding: 40px 16px;
+    min-height: auto;
+  }
 
   .offerTitle {
     font-size: $font-size-lg;
     font-weight: 500;
     text-transform: uppercase;
+
+    @media (max-width: $screen-lg) {
+      font-size: $font-size-md;
+    }
   }
 
   .offerPrice {
     font-size: $font-size-2xl;
     font-weight: 600;
     text-transform: uppercase;
+
+    @media (max-width: $screen-xl) {
+      font-size: $font-size-xl;
+    }
+    @media (max-width: $screen-lg) {
+      font-size: $font-size-md;
+    }
   }
 
   .offerDescription {
@@ -39,5 +56,14 @@
     .feature {
       font-size: $font-size-base;
     }
+  }
+}
+
+.darkTheme {
+  background-color: $color-dark;
+  color: $color-light-text;
+
+  .separator {
+    background: $color-light-border;
   }
 }
