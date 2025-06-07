@@ -3,6 +3,7 @@ import localFont from 'next/font/local';
 import './globals.css';
 import { AOSInitializer } from '@/components';
 import { ReactLenis } from 'lenis/react';
+import AnimationContainer from '@/providers/AnimationProvider';
 
 const velaSans = localFont({
   src: [
@@ -40,9 +41,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${velaSans.variable} antialiased`}>
-        <ReactLenis root />
-        <AOSInitializer />
-        {children}
+        <AnimationContainer>
+          <ReactLenis root />
+          <AOSInitializer />
+          {children}
+        </AnimationContainer>
       </body>
     </html>
   );
