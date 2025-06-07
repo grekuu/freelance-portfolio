@@ -6,7 +6,7 @@ import { burgerMenu, contactPhone, logo, pfp } from '../../../public';
 
 const Header = () => {
   return (
-    <header className={styles.header}>
+    <header className={styles.header} data-aos="fade">
       <button
         className={styles.burgerMenu}
         onClick={() => console.log('Open menu')}

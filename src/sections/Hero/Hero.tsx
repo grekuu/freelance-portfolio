@@ -7,11 +7,31 @@ const Hero = () => {
       <DecorativeLines count={5} animated={true} darkSection />
       <ContentContainer>
         <div className={styles.heroTextContainer}>
-          <h1>PRUSK</h1>
+          <h1 data-aos="fade-right" data-aos-duration="1000">
+            PRUSK
+          </h1>
           <h3>
-            <span className={styles.line1}>Design & tech</span>
-            <span className={styles.line2}>to launch your</span>
-            <span className={styles.line3}>online presence</span>
+            <span
+              className={styles.line1}
+              data-aos="fade-left"
+              data-aos-delay="1000"
+            >
+              Design & tech
+            </span>
+            <span
+              className={styles.line2}
+              data-aos="fade-left"
+              data-aos-delay="1300"
+            >
+              to launch your
+            </span>
+            <span
+              className={styles.line3}
+              data-aos="fade-left"
+              data-aos-delay="1600"
+            >
+              online presence
+            </span>
           </h3>
         </div>
         <ButtonAsLink

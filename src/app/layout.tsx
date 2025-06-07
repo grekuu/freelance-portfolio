@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import './globals.css';
+import { AOSInitializer } from '@/components';
 
 const velaSans = localFont({
   src: [
@@ -37,7 +38,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${velaSans.variable} antialiased`}>{children}</body>
+      <body className={`${velaSans.variable} antialiased`}>
+        <AOSInitializer />
+        {children}
+      </body>
     </html>
   );
 }
