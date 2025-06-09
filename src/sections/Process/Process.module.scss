@@ -1,0 +1,16 @@
+@use '../../styles/breakpoints' as *;
+@use '../../styles/variables' as *;
+
+.container {
+  height: 300dvh;
+  background: $color-dark;
+  position: relative;
+  padding-top: 40px;
+
+  .sectionTitle {
+    font-size: $font-size-3xl;
+    color: $color-light-text;
+    font-weight: 600;
+    margin-left: 16%;
+  }
+}
