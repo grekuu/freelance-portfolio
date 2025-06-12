@@ -2,7 +2,7 @@
 @use '../../styles/variables' as *;
 
 .container {
-  height: 300dvh;
+  height: 100dvh;
   background: $color-dark;
   position: relative;
   padding-top: 40px;
@@ -12,5 +12,12 @@
     color: $color-light-text;
     font-weight: 600;
     margin-left: 16%;
+  }
+
+  .stepText {
+    position: absolute;
+    top: 50%;
+    left: calc(16% + 20px);
+    transform: translateY(-50%);
   }
 }
