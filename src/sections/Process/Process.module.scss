@@ -12,6 +12,16 @@
     color: $color-light-text;
     font-weight: 600;
     margin-left: 16%;
+
+    @media (max-width: $screen-lg) {
+      font-size: $font-size-2xl;
+    }
+    @media (max-width: $screen-md) {
+      font-size: $font-size-xl;
+    }
+    @media (max-width: $screen-sm) {
+      margin-left: 0;
+    }
   }
 
   .stepText {
@@ -19,5 +29,42 @@
     top: 50%;
     left: calc(16% + 20px);
     transform: translateY(-50%);
+    padding-right: 50px;
+
+    @media (max-width: $screen-sm) {
+      left: 20px;
+      padding-right: 20px;
+    }
+
+    p {
+      color: $color-light-text;
+      font-weight: 500;
+      font-size: $font-size-3xl;
+
+      @media (max-width: $screen-lg) {
+        font-size: $font-size-2xl;
+      }
+      @media (max-width: $screen-md) {
+        font-size: $font-size-xl;
+      }
+      @media (max-width: $screen-sm) {
+        font-size: $font-size-lg;
+      }
+    }
+
+    span {
+      color: $color-text-light-20;
+      font-size: $font-size-2xl;
+
+      @media (max-width: $screen-lg) {
+        font-size: $font-size-xl;
+      }
+      @media (max-width: $screen-md) {
+        font-size: $font-size-lg;
+      }
+      @media (max-width: $screen-sm) {
+        font-size: $font-size-md;
+      }
+    }
   }
 }
