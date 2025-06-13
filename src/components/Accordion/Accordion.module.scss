@@ -1,0 +1,35 @@
+@use '../../styles/variables' as *;
+
+.faqItem {
+  width: 100%;
+
+  .question {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+
+    span {
+      font-size: $font-size-xl;
+      font-weight: 600;
+      color: $color-dark;
+    }
+  }
+
+  .hr {
+    width: 100%;
+    height: 1px;
+    background: $color-dark;
+    margin: 12px 0;
+    user-select: none;
+  }
+
+  .answer {
+    overflow: hidden;
+
+    p {
+      font-size: $font-size-md;
+      color: $color-dark;
+      font-weight: 500;
+    }
+  }
+}
