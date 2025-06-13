@@ -1,17 +1,25 @@
 @use '../../styles/variables' as *;
+@use '../../styles/breakpoints' as *;
 
 .faqItem {
   width: 100%;
+  margin-top: 12px;
 
   .question {
     cursor: pointer;
     background: transparent;
     border: none;
+    font-size: $font-size-xl;
+    font-weight: 600;
+    color: $color-dark;
+    text-align: left;
 
-    span {
-      font-size: $font-size-xl;
-      font-weight: 600;
-      color: $color-dark;
+    @media (max-width: $screen-xl) {
+      font-size: $font-size-lg;
+    }
+
+    @media (max-width: $screen-sm) {
+      font-size: $font-size-md;
     }
   }
 
@@ -19,7 +27,7 @@
     width: 100%;
     height: 1px;
     background: $color-dark;
-    margin: 12px 0;
+    margin-top: 12px;
     user-select: none;
   }
 
@@ -30,6 +38,11 @@
       font-size: $font-size-md;
       color: $color-dark;
       font-weight: 500;
+      margin-top: 12px;
+
+      @media (max-width: $screen-xl) {
+        font-size: $font-size-base;
+      }
     }
   }
 }

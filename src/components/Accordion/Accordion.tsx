@@ -40,7 +40,7 @@ const Accordion = ({
         aria-expanded={isOpen}
         aria-controls={`accordion-content-${index}`}
       >
-        <span>{question}</span>
+        {question}
       </button>
       <div className={styles.hr} />
       <div
