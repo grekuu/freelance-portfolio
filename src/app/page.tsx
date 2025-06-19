@@ -1,5 +1,4 @@
 import {
-  About,
   Contact,
   FAQ,
   Footer,
@@ -21,7 +20,6 @@ const Home = () => {
       <Services />
       <Process />
       <FAQ />
-      <About />
       <Contact />
       <Footer />
     </main>
