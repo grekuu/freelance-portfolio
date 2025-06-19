@@ -5,10 +5,12 @@
   background: $color-dark-button;
   font-size: $font-size-base;
   padding: 17px 60px;
-  border-radius: 10;
+  border-radius: 10px;
   border: 1px solid $color-dark-border;
   color: $color-light-text;
   text-decoration: none;
+  display: inline-block;
+  align-self: flex-start;
 
   @media (max-width: $screen-lg) {
     padding: 12px 40px;

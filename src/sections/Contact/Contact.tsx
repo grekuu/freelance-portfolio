@@ -1,8 +1,17 @@
-import { ContentContainer, SectionTag } from '@/components';
+'use client';
+
+import { Button, ContentContainer, SectionTag } from '@/components';
 import styles from './Contact.module.scss';
 import Link from 'next/link';
 import Image from 'next/image';
 import { southEastArrow } from '../../../public';
+import Select from 'react-select';
+
+const packageOptions = [
+  { value: 'standard', label: 'Standard' },
+  { value: 'premium', label: 'Premium' },
+  { value: 'custom', label: 'Custom' },
+];
 
 const Contact = () => {
   return (
@@ -20,9 +29,47 @@ const Contact = () => {
                 className={styles.southEastArrow}
               />
             </Link>
+            <Link href="#" className={styles.phoneNumber}>
+              +48 790-690-315
+            </Link>
+            <Link href="#" className={styles.email}>
+              gracjanprusik.web@gmail.com
+            </Link>
           </div>
 
-          <div className={styles.sectionRight}></div>
+          <div className={styles.sectionRight}>
+            <form className={styles.contactForm}>
+              <input type="text" placeholder="John" className={styles.input} />
+              <input
+                type="text"
+                placeholder="mail@example.com"
+                className={styles.input}
+              />
+              <Select
+                instanceId="package-select"
+                options={packageOptions}
+                classNames={{
+                  control: () => styles.selectControl,
+                  menu: () => styles.selectMenu,
+                  option: ({ isFocused }) =>
+                    isFocused ? styles.optionFocused : styles.option,
+                  singleValue: () => styles.selectValue,
+                  placeholder: () => styles.selectPlaceholder,
+                  indicatorSeparator: () => styles.hidden,
+                  dropdownIndicator: () => styles.dropdownIndicator,
+                }}
+                placeholder="Package"
+                className={styles.reactSelect}
+              />
+              <textarea
+                placeholder="Project Details"
+                name="Project Details"
+                className={`${styles.input} ${styles.textarea}`}
+                rows={4}
+              />
+              <Button text="Submit" />
+            </form>
+          </div>
         </div>
       </ContentContainer>
     </section>
