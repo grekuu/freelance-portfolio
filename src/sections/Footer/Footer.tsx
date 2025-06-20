@@ -1,5 +1,20 @@
+import { ContentContainer } from '@/components';
+import styles from './Footer.module.scss';
+import Link from 'next/link';
+
 const Footer = () => {
-  return <div>Footer</div>;
+  return (
+    <footer className={styles.container}>
+      <ContentContainer customClassName={styles.contentContainer}>
+        <div className={styles.itemsContainer}>
+          <p className={styles.footerText}>© PRUSK</p>
+          <Link href="#" className={styles.footerText}>
+            Privacy Policy
+          </Link>
+        </div>
+      </ContentContainer>
+    </footer>
+  );
 };
 
 export default Footer;

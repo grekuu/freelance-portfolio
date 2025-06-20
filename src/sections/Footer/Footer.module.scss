@@ -1,0 +1,26 @@
+@use '../../styles/variables' as *;
+
+.container {
+  width: 100%;
+  padding: 0 20px;
+  position: relative;
+  background: $color-light-bg;
+
+  .contentContainer {
+    background: $color-dark;
+    width: 100%;
+    padding: 40px 0 80px 0;
+
+    .itemsContainer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 28px;
+      .footerText {
+        color: $color-light-text;
+        text-decoration: none;
+        font-size: $font-size-base;
+      }
+    }
+  }
+}
