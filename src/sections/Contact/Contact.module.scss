@@ -1,4 +1,5 @@
 @use '../../styles/variables' as *;
+@use '../../styles/breakpoints' as *;
 
 .container {
   width: 100%;
@@ -14,17 +15,39 @@
     .bothSections {
       padding: 104px 38px 85px 38px;
       display: flex;
+      @media (max-width: $screen-lg) {
+        flex-direction: column;
+      }
+      @media (max-width: $screen-sm) {
+        padding: 40px 20px 0 20px;
+      }
       .sectionLeft {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         max-width: 50%;
+
+        @media (max-width: $screen-lg) {
+          max-width: 100%;
+        }
         .sectionTitle {
           font-size: $font-size-3xl;
           color: $color-light-text;
           font-weight: 600;
           line-height: 1;
           margin-bottom: 178px;
+
+          @media (max-width: $screen-xl) {
+            font-size: $font-size-2xl;
+          }
+
+          @media (max-width: $screen-lg) {
+            margin-bottom: 30px;
+          }
+
+          @media (max-width: $screen-sm) {
+            font-size: $font-size-md;
+          }
         }
 
         .callLink {
@@ -34,6 +57,14 @@
           text-decoration: none;
           position: relative;
           display: inline-block;
+
+          @media (max-width: $screen-xl) {
+            font-size: $font-size-2xl;
+          }
+
+          @media (max-width: $screen-sm) {
+            font-size: $font-size-md;
+          }
 
           &::after {
             content: '';
@@ -63,6 +94,9 @@
 
           .southEastArrow {
             margin-left: 10px;
+            height: 0.8em;
+            width: auto;
+            object-fit: contain;
           }
         }
 
@@ -71,6 +105,18 @@
           color: $color-dark-border;
           font-size: $font-size-xl;
           text-decoration: none;
+
+          @media (max-width: $screen-xl) {
+            font-size: $font-size-lg;
+          }
+
+          @media (max-width: $screen-lg) {
+            margin-top: 30px;
+          }
+
+          @media (max-width: $screen-sm) {
+            font-size: $font-size-md;
+          }
         }
 
         .email {
@@ -79,6 +125,14 @@
           text-decoration: none;
           color: $color-light-text;
           font-weight: 600;
+
+          @media (max-width: $screen-xl) {
+            font-size: $font-size-xl;
+          }
+
+          @media (max-width: $screen-sm) {
+            font-size: $font-size-md;
+          }
         }
       }
       .sectionRight {
@@ -93,6 +147,15 @@
           gap: 50px;
           width: 90%;
           justify-self: end;
+
+          @media (max-width: $screen-lg) {
+            width: 100%;
+            margin-top: 40px;
+          }
+
+          @media (max-width: $screen-sm) {
+            padding: 30px 20px;
+          }
 
           .input {
             background: transparent;

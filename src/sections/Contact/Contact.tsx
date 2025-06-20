@@ -33,17 +33,25 @@ const Contact = () => {
               +48 790-690-315
             </Link>
             <Link href="#" className={styles.email}>
-              gracjanprusik.web@gmail.com
+              contact@prusk.com
             </Link>
           </div>
 
           <div className={styles.sectionRight}>
             <form className={styles.contactForm}>
-              <input type="text" placeholder="John" className={styles.input} />
+              <input
+                type="text"
+                placeholder="John"
+                className={styles.input}
+                name="name"
+                autoComplete="name"
+              />
               <input
                 type="text"
                 placeholder="mail@example.com"
                 className={styles.input}
+                name="email"
+                autoComplete="email"
               />
               <Select
                 instanceId="package-select"
