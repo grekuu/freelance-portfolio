@@ -4,6 +4,7 @@ import './globals.css';
 import { AOSInitializer, CustomCursor } from '@/components';
 import { ReactLenis } from 'lenis/react';
 import AnimationContainer from '@/providers/AnimationProvider';
+import { CursorProvider } from '@/providers/CursorProvider';
 
 const velaSans = localFont({
   src: [
@@ -41,12 +42,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${velaSans.variable} antialiased`}>
-        <AnimationContainer>
-          <ReactLenis root />
-          <AOSInitializer />
-          <CustomCursor />
-          {children}
-        </AnimationContainer>
+        <CursorProvider>
+          <AnimationContainer>
+            <ReactLenis root />
+            <AOSInitializer />
+            <CustomCursor />
+            {children}
+          </AnimationContainer>
+        </CursorProvider>
       </body>
     </html>
   );

@@ -11,8 +11,14 @@
   text-decoration: none;
   display: inline-block;
   align-self: flex-start;
+  cursor: pointer;
 
   @media (max-width: $screen-lg) {
     padding: 12px 40px;
+  }
+
+  &:hover {
+    background: transparent;
+    border: $color-dark-button;
   }
 }

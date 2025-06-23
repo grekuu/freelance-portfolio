@@ -3,9 +3,11 @@
 import { useEffect, useRef } from 'react';
 import styles from './CustomCursor.module.scss';
 import { gsap } from 'gsap';
+import { useCursor } from '@/providers/CursorProvider';
 
 const CustomCursor = () => {
   const cursorRef = useRef<HTMLDivElement>(null);
+  const { isHovering } = useCursor();
 
   useEffect(() => {
     const cursor = cursorRef.current;
@@ -35,7 +37,14 @@ const CustomCursor = () => {
     };
   }, []);
 
-  return <div className={styles.cursor} ref={cursorRef} />;
+  return (
+    <div
+      className={`${styles.cursor} ${isHovering ? styles.enlarged : ''}`}
+      ref={cursorRef}
+    >
+      {isHovering && <span className={styles.cursorText}>CHECK</span>}
+    </div>
+  );
 };
 
 export default CustomCursor;
