@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import './globals.css';
-import { AOSInitializer } from '@/components';
+import { AOSInitializer, CustomCursor } from '@/components';
 import { ReactLenis } from 'lenis/react';
 import AnimationContainer from '@/providers/AnimationProvider';
 
@@ -44,6 +44,7 @@ export default function RootLayout({
         <AnimationContainer>
           <ReactLenis root />
           <AOSInitializer />
+          <CustomCursor />
           {children}
         </AnimationContainer>
       </body>

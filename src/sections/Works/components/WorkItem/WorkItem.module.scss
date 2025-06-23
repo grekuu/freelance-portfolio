@@ -14,9 +14,17 @@
       padding: 20px 15px;
     }
 
-    img {
+    .image {
       width: 100%;
-      height: auto;
+      transition: ease-in-out 10s;
+      height: 400px;
+      background-size: cover;
+      background-position: top;
+      cursor: pointer;
+
+      &:hover {
+        background-position: bottom;
+      }
     }
   }
 

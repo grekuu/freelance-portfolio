@@ -1,8 +1,7 @@
-import Image, { StaticImageData } from 'next/image';
 import styles from './WorkItem.module.scss';
 
 type WorkItemProps = {
-  image: StaticImageData;
+  image: string;
   companyName: string;
   service: string;
 };
@@ -11,7 +10,10 @@ const WorkItem = ({ image, companyName, service }: WorkItemProps) => {
   return (
     <div className={styles.workItem}>
       <div className={styles.imageContainer}>
-        <Image src={image} alt={companyName} />
+        <div
+          className={styles.image}
+          style={{ backgroundImage: `url(${image})` }}
+        />
       </div>
       <div className={styles.workInfo}>
         <span>{companyName}</span>
