@@ -5,7 +5,7 @@ import { OfferCard } from './components';
 
 const Services = () => {
   return (
-    <section className={styles.container} id="#services">
+    <section className={styles.container} id="services">
       <DecorativeLines count={2} />
       <ContentContainer>
         <SectionTag text="Services" />

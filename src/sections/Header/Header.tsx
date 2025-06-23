@@ -23,9 +23,6 @@ const Header = () => {
         <Link href="#services" className={styles.link}>
           Services
         </Link>
-        <Link href="#about" className={styles.link}>
-          About
-        </Link>
       </div>
       <Link href={'/'}>
         <Image src={logo} alt="Logo" />

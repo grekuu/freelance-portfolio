@@ -5,7 +5,7 @@ import { worksData } from '@/data';
 
 const Works = () => {
   return (
-    <section className={styles.container} id="#works">
+    <section className={styles.container} id="works">
       <DecorativeLines count={2} />
       <ContentContainer>
         <SectionTag text="Our Works" />

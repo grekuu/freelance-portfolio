@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const Testimonials = () => {
   return (
-    <section className={styles.container}>
+    <section className={styles.container} id="testimonials">
       <DecorativeLines count={2} darkSection />
       <ContentContainer customClassName={styles.contentContainer}>
         <SectionTag text="Client Approval" darkSection />

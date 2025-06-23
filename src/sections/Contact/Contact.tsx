@@ -15,7 +15,7 @@ const packageOptions = [
 
 const Contact = () => {
   return (
-    <section className={styles.container}>
+    <section className={styles.container} id="contact">
       <ContentContainer customClassName={styles.contentContainer}>
         <SectionTag text="Contact" darkSection />
         <div className={styles.bothSections}>
