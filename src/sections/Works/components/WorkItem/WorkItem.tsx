@@ -10,18 +10,21 @@ type WorkItemProps = {
 };
 
 const WorkItem = ({ image, companyName, service }: WorkItemProps) => {
-  const { setIsHovering } = useCursor();
+  const { setIsHovering, setCursorText } = useCursor();
 
   return (
-    <div
-      className={styles.workItem}
-      onMouseEnter={() => setIsHovering(true)}
-      onMouseLeave={() => setIsHovering(false)}
-    >
+    <div className={styles.workItem}>
       <div className={styles.imageContainer}>
         <div
           className={styles.image}
           style={{ backgroundImage: `url(${image})` }}
+          onMouseEnter={() => {
+            setCursorText('CHECK');
+            setIsHovering(true);
+          }}
+          onMouseLeave={() => {
+            setIsHovering(false);
+          }}
         />
       </div>
       <div className={styles.workInfo}>

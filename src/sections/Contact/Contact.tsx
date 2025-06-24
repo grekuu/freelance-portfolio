@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { southEastArrow } from '../../../public';
 import Select from 'react-select';
+import { useCursor } from '@/providers/CursorProvider';
 
 const packageOptions = [
   { value: 'standard', label: 'Standard' },
@@ -14,6 +15,7 @@ const packageOptions = [
 ];
 
 const Contact = () => {
+  const { setIsHovering, setCursorText } = useCursor();
   return (
     <section className={styles.container} id="contact">
       <ContentContainer customClassName={styles.contentContainer}>
@@ -21,7 +23,17 @@ const Contact = () => {
         <div className={styles.bothSections}>
           <div className={styles.sectionLeft}>
             <h2 className={styles.sectionTitle}>Let&apos;s collaborate!</h2>
-            <Link href="#" className={styles.callLink}>
+            <Link
+              href="#"
+              className={styles.callLink}
+              onMouseEnter={() => {
+                setCursorText('FREE');
+                setIsHovering(true);
+              }}
+              onMouseLeave={() => {
+                setIsHovering(false);
+              }}
+            >
               BOOK A CALL
               <Image
                 src={southEastArrow}

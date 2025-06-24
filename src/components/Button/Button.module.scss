@@ -12,6 +12,7 @@
   display: inline-block;
   align-self: flex-start;
   cursor: pointer;
+  transition: 0.3s ease;
 
   @media (max-width: $screen-lg) {
     padding: 12px 40px;
@@ -19,6 +20,6 @@
 
   &:hover {
     background: transparent;
-    border: $color-dark-button;
+    border: 1px solid $color-dark-button;
   }
 }

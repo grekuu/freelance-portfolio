@@ -1,8 +1,11 @@
+'use client';
 import { ContentContainer, DecorativeLines, SectionTag } from '@/components';
 import styles from './Testimonials.module.scss';
 import Link from 'next/link';
+import { useCursor } from '@/providers/CursorProvider';
 
 const Testimonials = () => {
+  const { setIsHovering, setCursorText } = useCursor();
   return (
     <section className={styles.container} id="testimonials">
       <DecorativeLines count={2} darkSection />
@@ -17,7 +20,17 @@ const Testimonials = () => {
           <p>Lena Prusik</p>
           <p>Personal Trainer</p>
         </div>
-        <Link href="" className={styles.readMoreBtn}>
+        <Link
+          href=""
+          className={styles.readMoreBtn}
+          onMouseEnter={() => {
+            setCursorText('READ');
+            setIsHovering(true);
+          }}
+          onMouseLeave={() => {
+            setIsHovering(false);
+          }}
+        >
           +Read more Testimonials
         </Link>
       </ContentContainer>

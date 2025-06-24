@@ -7,7 +7,7 @@ import { useCursor } from '@/providers/CursorProvider';
 
 const CustomCursor = () => {
   const cursorRef = useRef<HTMLDivElement>(null);
-  const { isHovering } = useCursor();
+  const { isHovering, cursorText } = useCursor();
 
   useEffect(() => {
     const cursor = cursorRef.current;
@@ -42,7 +42,7 @@ const CustomCursor = () => {
       className={`${styles.cursor} ${isHovering ? styles.enlarged : ''}`}
       ref={cursorRef}
     >
-      {isHovering && <span className={styles.cursorText}>CHECK</span>}
+      {isHovering && <span className={styles.cursorText}>{cursorText}</span>}
     </div>
   );
 };
