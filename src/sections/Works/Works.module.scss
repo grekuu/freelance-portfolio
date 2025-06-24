@@ -6,6 +6,7 @@
   background: $color-light-bg;
   padding: 40px 0 91px 0;
   position: relative;
+  overflow-x: hidden;
 
   .sectionTitle {
     font-size: $font-size-3xl;

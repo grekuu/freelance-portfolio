@@ -38,6 +38,9 @@ const Hero = () => {
           text="Contact us"
           href="#contact"
           className={styles.contactBtn}
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="2000"
         />
       </ContentContainer>
       <div className={styles.verticalLine}>

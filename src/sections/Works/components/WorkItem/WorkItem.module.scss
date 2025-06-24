@@ -14,16 +14,21 @@
       padding: 20px 15px;
     }
 
-    .image {
-      width: 100%;
-      transition: ease-in-out 10s;
+    .imageWrapper {
+      position: relative;
       height: 400px;
-      background-size: cover;
-      background-position: top;
+      width: 100%;
+      overflow: hidden;
       cursor: pointer;
 
-      &:hover {
-        background-position: bottom;
+      .image {
+        object-fit: cover;
+        object-position: top;
+        transition: object-position 10s ease-in-out;
+      }
+
+      &:hover .image {
+        object-position: bottom;
       }
     }
   }

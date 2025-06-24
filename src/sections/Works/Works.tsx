@@ -9,8 +9,19 @@ const Works = () => {
       <DecorativeLines count={2} />
       <ContentContainer>
         <SectionTag text="Our Works" />
-        <h2 className={styles.sectionTitle}>Here’s what we’ve been building</h2>
-        <p className={styles.sectionSubtitle}>
+        <h2
+          className={styles.sectionTitle}
+          data-aos="fade-right"
+          data-aos-duration="1000"
+        >
+          Here’s what we’ve been building
+        </h2>
+        <p
+          className={styles.sectionSubtitle}
+          data-aos="fade-right"
+          data-aos-delay="300"
+          data-aos-duration="1000"
+        >
           Websites tailored to each client’s needs — fast, clean, and
           functional.
         </p>

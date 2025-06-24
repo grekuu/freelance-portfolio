@@ -5,6 +5,8 @@ type ButtonAsLinkProps = {
   text: string;
   href: string;
   className?: string;
+  'data-aos'?: string;
+  'data-aos-delay'?: string;
 };
 
 type ButtonProps = {
@@ -13,9 +15,18 @@ type ButtonProps = {
   className?: string;
 };
 
-export const ButtonAsLink = ({ text, href, className }: ButtonAsLinkProps) => {
+export const ButtonAsLink = ({
+  text,
+  href,
+  className,
+  ...restProps
+}: ButtonAsLinkProps) => {
   return (
-    <Link href={href} className={`${styles.button} ${className || ''}`}>
+    <Link
+      href={href}
+      className={`${styles.button} ${className || ''}`}
+      {...restProps}
+    >
       {text}
     </Link>
   );

@@ -1,0 +1,24 @@
+.blurContainer {
+  overflow: hidden;
+
+  .wordWrapper {
+    display: inline-block;
+    white-space: nowrap;
+  }
+
+  &.visible .blurChar {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+.blurChar {
+  display: inline-block;
+  opacity: 0;
+  filter: blur(10px);
+  transform: translateY(10px);
+  transition-property: opacity, filter, transform;
+  transition-duration: 0.5s;
+  transition-delay: calc(var(--char-index) * 0.02s);
+}
