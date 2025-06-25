@@ -61,7 +61,14 @@ const FAQ = () => {
       <ContentContainer>
         <SectionTag text="FAQ" />
         <div className={styles.contentWrapper}>
-          <h2 className={styles.sectionTitle}>Any questions?</h2>
+          <h2
+            className={styles.sectionTitle}
+            data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-duration="800"
+          >
+            Any questions?
+          </h2>
           <div>
             {faqItems.map((item, index) => (
               <Accordion

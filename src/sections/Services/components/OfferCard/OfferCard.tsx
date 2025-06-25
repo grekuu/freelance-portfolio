@@ -6,6 +6,9 @@ type OfferCardProps = {
   description: string;
   features: string[];
   darkMode?: boolean;
+  'data-aos'?: string;
+  'data-aos-delay'?: number;
+  'data-aos-duration'?: string;
 };
 
 const OfferCard = ({
@@ -14,10 +17,12 @@ const OfferCard = ({
   description,
   features,
   darkMode = false,
+  ...props
 }: OfferCardProps) => {
   return (
     <div
       className={`${styles.cardContainer} ${darkMode ? styles.darkTheme : ''}`}
+      {...props}
     >
       <h3 className={styles.offerTitle}>{title}</h3>
       <p className={styles.offerPrice}>{price}+ PLN</p>
