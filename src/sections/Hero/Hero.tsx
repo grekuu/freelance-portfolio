@@ -8,9 +8,9 @@ const Hero = () => {
       <ContentContainer>
         <div className={styles.heroTextContainer}>
           <h1 data-aos="fade-right" data-aos-duration="1000">
-            PRUSK
+            PRUSITE
           </h1>
-          <h3>
+          <div className={styles.heroText}>
             <span
               className={styles.line1}
               data-aos="fade-left"
@@ -32,7 +32,7 @@ const Hero = () => {
             >
               online presence
             </span>
-          </h3>
+          </div>
         </div>
         <ButtonAsLink
           text="Contact us"

@@ -29,28 +29,28 @@
     h1 {
       font-weight: 500;
       color: $color-light-text;
-      font-size: 16rem;
+      font-size: 14rem;
       line-height: 1;
       margin-top: 3rem;
 
       @media (max-width: $screen-xl) {
-        font-size: 13rem;
+        font-size: 11rem;
       }
 
       @media (max-width: $screen-lg) {
-        font-size: 10rem;
-      }
-
-      @media (max-width: $screen-md) {
         font-size: 8rem;
       }
 
-      @media (max-width: $screen-sm) {
+      @media (max-width: $screen-md) {
         font-size: 6rem;
+      }
+
+      @media (max-width: $screen-sm) {
+        font-size: 4rem;
       }
     }
 
-    h3 {
+    .heroText {
       color: $color-light-text;
       font-size: $font-size-3xl;
       display: flex;

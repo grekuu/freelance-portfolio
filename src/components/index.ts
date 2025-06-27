@@ -6,3 +6,4 @@ export { default as AOSInitializer } from './AOSInitializer/AOSInitializer';
 export { default as Accordion } from './Accordion/Accordion';
 export { default as CustomCursor } from './CustomCursor/CustomCursor';
 export { default as BlurRevealText } from './BlurRevealText/BlurRevealText';
+export { default as JsonLd } from './JsonLd/JsonLd';

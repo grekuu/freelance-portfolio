@@ -28,7 +28,14 @@ const WorkItem = ({ image, companyName, service }: WorkItemProps) => {
             setIsHovering(false);
           }}
         >
-          <Image src={image} alt={companyName} fill className={styles.image} />
+          <Image
+            src={image}
+            alt={companyName}
+            fill
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className={styles.image}
+            loading="lazy"
+          />
         </div>
       </div>
       <div className={styles.workInfo}>

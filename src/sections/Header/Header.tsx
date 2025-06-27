@@ -29,7 +29,13 @@ const Header = () => {
       </Link>
 
       <Link href="#contact" className={styles.contactBtn}>
-        <Image src={pfp} alt="Gracjan Prusik" />
+        <Image
+          src={pfp}
+          alt="Gracjan Prusik"
+          className={styles.profilePic}
+          width={24}
+          height={24}
+        />
         Contact us
       </Link>
       <Link href="#contact" className={styles.contactIcon}>

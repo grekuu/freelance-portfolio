@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://prusk.com/sitemap.xml

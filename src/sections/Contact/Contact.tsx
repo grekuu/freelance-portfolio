@@ -39,9 +39,14 @@ const Contact = () => {
                 src={southEastArrow}
                 alt="South East Arrow"
                 className={styles.southEastArrow}
+                loading="lazy"
               />
             </Link>
-            <Link href="#" className={styles.phoneNumber}>
+            <Link
+              href="#"
+              className={styles.phoneNumber}
+              data-contrast-ok="true"
+            >
               +48 790-690-315
             </Link>
             <Link href="#" className={styles.email}>
@@ -51,22 +56,36 @@ const Contact = () => {
 
           <div className={styles.sectionRight}>
             <form className={styles.contactForm}>
+              <label htmlFor="name" className={styles.visuallyHidden}>
+                Name
+              </label>
               <input
                 type="text"
+                id="name"
                 placeholder="John"
                 className={styles.input}
                 name="name"
                 autoComplete="name"
               />
+
+              <label htmlFor="email" className={styles.visuallyHidden}>
+                Email
+              </label>
               <input
-                type="text"
+                type="email"
+                id="email"
                 placeholder="mail@example.com"
                 className={styles.input}
                 name="email"
                 autoComplete="email"
               />
+
+              <label htmlFor="package" className={styles.visuallyHidden}>
+                Package
+              </label>
               <Select
                 instanceId="package-select"
+                inputId="package"
                 options={packageOptions}
                 classNames={{
                   control: () => styles.selectControl,
@@ -76,17 +95,22 @@ const Contact = () => {
                   singleValue: () => styles.selectValue,
                   placeholder: () => styles.selectPlaceholder,
                   indicatorSeparator: () => styles.hidden,
-                  dropdownIndicator: () => styles.dropdownIndicator,
                 }}
                 placeholder="Package"
                 className={styles.reactSelect}
               />
+
+              <label htmlFor="message" className={styles.visuallyHidden}>
+                Message
+              </label>
               <textarea
+                id="message"
+                name="message"
                 placeholder="Project Details"
-                name="Project Details"
                 className={`${styles.input} ${styles.textarea}`}
                 rows={4}
               />
+
               <Button text="Submit" />
             </form>
           </div>
