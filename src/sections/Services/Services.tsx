@@ -2,6 +2,7 @@ import { ContentContainer, DecorativeLines, SectionTag } from '@/components';
 import styles from './Services.module.scss';
 import { offersData } from '@/data';
 import { OfferCard } from './components';
+import Link from 'next/link';
 
 const Services = () => {
   return (
@@ -22,8 +23,9 @@ const Services = () => {
           data-aos-delay="300"
           data-aos-duration="1000"
         >
-          Flexible packages tailored to your goals. Whether you need a simple
-          site or a custom solution, we’ve got you covered.
+          From simple websites to full branding kits — we turn your ideas into
+          design-driven digital experiences. Need just a site, or also social
+          media visuals, logo, and more? We’ve got you.
         </p>
         <div className={styles.offersContainer}>
           {offersData.map((offer, index) => (
@@ -40,6 +42,12 @@ const Services = () => {
             />
           ))}
         </div>
+        <p className={styles.pricingNote}>
+          * All projects are priced individually based on your needs.{' '}
+          <Link href="#contact">Let&apos;s chat</Link> and figure out what fits
+          best. <br />
+          We also offer standalone graphic and branding services.
+        </p>
       </ContentContainer>
     </section>
   );

@@ -38,4 +38,13 @@
       align-items: center;
     }
   }
+  .pricingNote {
+    font-size: $font-size-base;
+    color: $color-dark;
+    padding: 30px 36px 0px 36px;
+
+    a {
+      color: $color-dark;
+    }
+  }
 }

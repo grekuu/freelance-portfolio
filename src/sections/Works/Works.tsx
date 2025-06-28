@@ -22,7 +22,7 @@ const Works = () => {
           data-aos-delay="300"
           data-aos-duration="1000"
         >
-          Websites tailored to each client’s needs — fast, clean, and
+          Projects tailored to each client’s needs — fast, clean, and
           functional.
         </p>
 
