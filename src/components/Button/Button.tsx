@@ -13,6 +13,7 @@ type ButtonProps = {
   text: string;
   onClick?: () => void;
   className?: string;
+  disabled?: boolean;
 };
 
 export const ButtonAsLink = ({
@@ -32,9 +33,13 @@ export const ButtonAsLink = ({
   );
 };
 
-export const Button = ({ text, onClick, className }: ButtonProps) => {
+export const Button = ({ text, onClick, className, disabled }: ButtonProps) => {
   return (
-    <button className={`${styles.button} ${className || ''}`} onClick={onClick}>
+    <button
+      className={`${styles.button} ${className || ''}`}
+      onClick={onClick}
+      disabled={disabled}
+    >
       {text}
     </button>
   );
