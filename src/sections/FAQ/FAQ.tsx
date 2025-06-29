@@ -8,39 +8,7 @@ import {
 } from '@/components';
 import styles from './FAQ.module.scss';
 import { useState } from 'react';
-
-const faqItems = [
-  {
-    question: 'What ongoing support do you provide?',
-    answer:
-      'Absolutely. I offer custom Webflow builds tailored to your business goals, focusing on modern design, scalability, and ease of management. From strategy to launch, I ensure your site is set up for long-term success.',
-  },
-  {
-    question: 'Can you build a brand-new Webflow site for us?',
-    answer:
-      'Absolutely. I offer custom Webflow builds tailored to your business goals, focusing on modern design, scalability, and ease of management. From strategy to launch, I ensure your site is set up for long-term success.',
-  },
-  {
-    question: 'Can you integrate tools like HubSpot or Zapier?',
-    answer:
-      'Absolutely. I offer custom Webflow builds tailored to your business goals, focusing on modern design, scalability, and ease of management. From strategy to launch, I ensure your site is set up for long-term success.',
-  },
-  {
-    question: 'Will my website be SEO-friendly?',
-    answer:
-      'Absolutely. I offer custom Webflow builds tailored to your business goals, focusing on modern design, scalability, and ease of management. From strategy to launch, I ensure your site is set up for long-term success.',
-  },
-  {
-    question: 'Why choose you over a big agency?',
-    answer:
-      'Absolutely. I offer custom Webflow builds tailored to your business goals, focusing on modern design, scalability, and ease of management. From strategy to launch, I ensure your site is set up for long-term success.',
-  },
-  {
-    question: 'Do you offer branding and visual identity?',
-    answer:
-      'Absolutely. I offer custom Webflow builds tailored to your business goals, focusing on modern design, scalability, and ease of management. From strategy to launch, I ensure your site is set up for long-term success.',
-  },
-];
+import { faqData } from '@/data';
 
 const FAQ = () => {
   const [openAccordionIndex, setOpenAccordionIndex] = useState<number | null>(
@@ -70,7 +38,7 @@ const FAQ = () => {
             Any questions?
           </h2>
           <div>
-            {faqItems.map((item, index) => (
+            {faqData.map((item, index) => (
               <Accordion
                 key={index}
                 index={index}
