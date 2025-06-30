@@ -1,10 +1,14 @@
 @use '../../styles/variables' as *;
+@use '../../styles/breakpoints' as *;
 
 .container {
   width: 100%;
   padding: 0 20px;
   position: relative;
   background: $color-light-bg;
+  @media (max-width: $screen-sm) {
+    padding: 0 10px;
+  }
 
   .contentContainer {
     background: $color-dark;
