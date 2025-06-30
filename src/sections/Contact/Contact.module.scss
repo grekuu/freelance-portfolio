@@ -7,6 +7,10 @@
   position: relative;
   background: $color-light-bg;
 
+  @media (max-width: $screen-sm) {
+    padding: 0 10px;
+  }
+
   .contentContainer {
     background: $color-dark;
     width: 100%;
