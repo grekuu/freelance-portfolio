@@ -4,7 +4,7 @@ import { Button, ContentContainer, SectionTag } from '@/components';
 import styles from './Contact.module.scss';
 import Link from 'next/link';
 import Image from 'next/image';
-import { southEastArrow } from '../../../public';
+import { southEastArrow } from '../../../../public';
 import Select from 'react-select';
 import { useCursor } from '@/providers/CursorProvider';
 import { Controller, useForm } from 'react-hook-form';

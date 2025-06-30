@@ -1,14 +1,13 @@
+import { Footer, Header } from '@/blocks';
 import {
   Contact,
   FAQ,
-  Footer,
-  Header,
   Hero,
   Process,
   Services,
   Testimonials,
   Works,
-} from '@/sections';
+} from '@/sections/Landing';
 
 const Home = () => {
   return (

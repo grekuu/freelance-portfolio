@@ -8,7 +8,7 @@ const Footer = () => {
       <ContentContainer customClassName={styles.contentContainer}>
         <div className={styles.itemsContainer}>
           <p className={styles.footerText}>© PRUSK</p>
-          <Link href="#" className={styles.footerText}>
+          <Link href="/privacy-policy" className={styles.footerText}>
             Privacy Policy
           </Link>
         </div>

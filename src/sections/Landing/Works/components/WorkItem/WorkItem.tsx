@@ -1,7 +1,7 @@
 'use client';
 
 import styles from './WorkItem.module.scss';
-import { useCursor } from '../../../../providers/CursorProvider';
+import { useCursor } from '../../../../../providers/CursorProvider';
 import Image from 'next/image';
 
 type WorkItemProps = {

@@ -1,11 +1,12 @@
-@use '../../styles/variables' as *;
-@use '../../styles/breakpoints' as *;
+@use '../../../styles/variables' as *;
+@use '../../../styles/breakpoints' as *;
 
 .container {
   width: 100%;
   background: $color-light-bg;
   padding: 40px 0 91px 0;
   position: relative;
+  overflow-x: hidden;
 
   .sectionTitle {
     font-size: $font-size-3xl;
@@ -21,30 +22,24 @@
     font-weight: 600;
   }
 
-  .offersContainer {
-    display: flex;
-    justify-content: space-between;
-    gap: 36px;
+  .worksGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 136px;
+    row-gap: 56px;
     margin-top: 88px;
-    padding: 0 36px;
 
     @media (max-width: $screen-lg) {
-      gap: 16px;
-      padding: 0 16px;
+      column-gap: 80px;
     }
 
     @media (max-width: $screen-md) {
-      flex-direction: column;
-      align-items: center;
+      grid-template-columns: 1fr;
+      row-gap: 40px;
     }
-  }
-  .pricingNote {
-    font-size: $font-size-base;
-    color: $color-dark;
-    padding: 30px 36px 0px 36px;
 
-    a {
-      color: $color-dark;
+    @media (max-width: $screen-sm) {
+      margin-top: 40px;
     }
   }
 }
