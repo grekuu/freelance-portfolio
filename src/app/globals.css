@@ -8,11 +8,11 @@
 }
 
 ::selection {
-  background-color: #252a1c;
-  color: #fffce1;
+  background-color: rgba(40, 38, 34, 0.7);
+  color: #e8e5dd;
 }
 
 ::-moz-selection {
-  background-color: #252a1c;
-  color: #fffce1;
+  background-color: rgba(40, 38, 34, 0.7);
+  color: #e8e5dd;
 }
